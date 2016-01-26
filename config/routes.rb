@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'welcome/contact'
+
   resources :activities
   resources :states
   root 'welcome#index'
