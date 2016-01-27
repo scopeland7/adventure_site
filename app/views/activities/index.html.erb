@@ -1,3 +1,4 @@
+
 <p id="notice"><%= notice %></p>
 
 <h1>Listing Activities</h1>
@@ -27,7 +28,12 @@
     <% end %>
   </tbody>
 </table>
+<%= link_to 'New Activity', new_activity_path %>
+
 
 <br>
 
-<%= link_to 'New Activity', new_activity_path %>
+<% @images.shuffle.each do |pic| %>
+  <%= image_tag pic, alt: "Adventures", width: "250", height: "200" %>
+<% end %>
+

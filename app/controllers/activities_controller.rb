@@ -5,6 +5,8 @@ class ActivitiesController < ApplicationController
   # GET /activities.json
   def index
     @activities = Activity.all
+    @images = ['wicked.jpg', 'buffalo.jpg', 'space_needle.jpg', 'ga_aquarium.jpg']
+
   end
 
   # GET /activities/1
@@ -72,3 +74,4 @@ class ActivitiesController < ApplicationController
       params.require(:activity).permit(:name, :cost, :duration)
     end
 end
+
